@@ -18,7 +18,8 @@ class PreferenceService {
   }
 
 
-  clear(){
+  clear() async{
+    sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.clear();
   }
 }
